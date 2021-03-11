@@ -44,18 +44,18 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses: 122.111.26.70
+Only the JumpBox machine can accept ssh connections and the Load Balancer http requests. Access to these machines is only allowed from the following IP addresses: 122.111.26.70
 
-Machines within the network can only be accessed by the Jump Box - 104.210.119.140
+Machines within the network can only be accessed by the Jump Box or the Load Balancer
 
 A summary of the access policies in place can be found in the table below.
 
-| Name          | Publicly Accessible  | Allowed IP Addresses |
-|----------     |--------------------- |----------------------|
-| Jump Box      | Yes                  | 122.111.26.70        |
-| Webservers    | No                   | 10.0.0.4             |
-| ELKserver     | Yes                  | 122.111.26.70        |
-| Load Balancer | Yes                  | 122.111.26.70        |
+| Name          | Publicly Accessible  | Allowed IP Addresses     |
+|-------------- |--------------------- |------------------------- |
+| Jump Box      | Yes                  | 122.111.26.70            |
+| Webservers    | No                   | 10.0.0.4, load balancer  |
+| ELKserver     | Yes                  | 122.111.26.70            |
+| Load Balancer | Yes                  | 122.111.26.70            |
 
 ### Elk Configuration
 
